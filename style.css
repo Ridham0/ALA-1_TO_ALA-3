@@ -1,76 +1,111 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ece9e6, #ffffff);
     color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
+/* Container */
 .container {
-    width: 80%;
-    margin: 50px auto;
+    max-width: 600px; /* Adjusted for better responsive width */
+    margin: 0 auto;
+    padding: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     border-radius: 10px;
-}
-
-header {
     text-align: center;
-    margin-bottom: 30px;
 }
 
-header h1 {
-    font-size: 2.5em;
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header img {
+    max-width: 270px;
+    height: auto;
+    border: 50%;
+}
+
+.header-text {
+    font-size: 18px;
+    font-weight: bold;
     color: #4CAF50;
-}
-
-header h2 {
-    font-size: 1.5em;
-    color: #555;
-}
-
-.details .info {
     text-align: left;
-    font-size: 1.2em;
 }
 
-.details p {
-    margin: 15px 0;
+/* Details Section */
+.details .info p {
+    margin: 10px 0;
     padding: 10px;
     background-color: #e0f7fa;
     border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
 }
 
-.buttons {
+/* Button Container */
+.button-container {
     display: flex;
-    justify-content: center;
-    margin: 30px 0;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-button {
-    padding: 15px 30px;
-    margin: 0 10px;
+.button {
+    flex: 1;
+    max-width: 120px;
     background-color: #4c74af;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.button a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.button:hover {
     background-color: #27bacd;
 }
 
+/* Footer */
 footer {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 0.9em;
-    color: #777;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .details .info p {
+        font-size: 14px;
+    }
+
+    .button {
+        max-width: 100%;
+        font-size: 14px;
+    }
 }
